@@ -28,11 +28,8 @@
 - [🔎 How It Works (Step-by-Step)](#-how-it-works-step-by-step)
 - [🛠️ Customization](#️-customization)
 - [🧯 Troubleshooting](#-troubleshooting)
-- [⚠️ Known Limitations](#️-known-limitations)
-- [🔐 Security Notes](#-security-notes)
 - [🗺️ Roadmap Ideas](#️-roadmap-ideas)
 - [🙏 Acknowledgements / Sources](#-acknowledgements--sources)
-- [📄 License](#-license)
 - [📁 Project Structure](#-project-structure)
 
 ---
@@ -287,35 +284,6 @@ df = pd.concat([products, description, tagline], ignore_index=True)
 
 ---
 
-## ⚠️ Known Limitations
-
-| Limitation | Details |
-|------------|---------|
-| **Small Base Model** | Qwen1.5-0.5B is a compact model — generation quality is limited compared to 7B+ models |
-| **Low ROUGE/BLEU** | The model paraphrases rather than copying reference text — expected for generative models |
-| **English Only** | Training data and evaluation are English-only |
-| **Category Dependency** | Performance varies by category — categories with more training samples produce better results |
-| **No Hallucination Control** | The model may generate plausible-sounding but factually incorrect product details |
-| **Single Dataset** | Trained only on Amazon product data — may not generalize to other e-commerce platforms |
-| **No Quantization at Inference** | Merged model runs in FP16 — could be further optimized with GPTQ/AWQ |
-| **Colab Dependency** | Designed for Google Colab — running locally requires path adjustments |
-| **Token Limit** | Max 400 tokens — very long product descriptions may be truncated |
-
----
-
-## 🔐 Security Notes
-
-| ⚠️ Security Consideration | Recommendation |
-|---------------------------|----------------|
-| **Google Drive Paths** | Hardcoded paths are exposed in notebooks — avoid committing notebooks with sensitive paths |
-| **API Keys** | No API keys are used in this project — all models are loaded locally |
-| **Model Outputs** | Generated content should be reviewed before publishing — models can produce misleading text |
-| **Dataset Privacy** | The Amazon product dataset is publicly available — but verify licensing before commercial use |
-| **Model Weights** | If sharing the fine-tuned model, ensure compliance with Qwen's model license (Apache 2.0) |
-| **Colab Sessions** | Colab sessions may leave model weights in temporary storage — clear `/content/` after use |
-
----
-
 ## 🗺️ Roadmap Ideas
 
 - [ ] 🔄 **Quantize merged model** with GPTQ/AWQ for faster inference
@@ -345,14 +313,6 @@ df = pd.concat([products, description, tagline], ignore_index=True)
 | **Amazon Product Dataset** | Publicly available Amazon product listings |
 | **Google Colab** | Free GPU compute platform by Google |
 | **BitsAndBytes** | [Tim Dettmers](https://github.com/TimDettmers/bitsandbytes) |
-
----
-
-## 📄 License
-
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
-
-The base model (Qwen1.5-0.5B-Chat) is licensed under **Apache 2.0** by Alibaba Cloud.
 
 ---
 
