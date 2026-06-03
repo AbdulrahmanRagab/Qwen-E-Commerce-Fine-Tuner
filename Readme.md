@@ -5,6 +5,9 @@
   <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" />
 </p>
 
+# Project Codes:
+https://drive.google.com/drive/folders/1loRNILD4cNA9Yxy7zmm9Ob__10Ytvz0w?usp=drive_link
+
 # 🛒 Fine-Tuning Qwen1.5-0.5B-Chat for Amazon Product Content Generation
 
 > **Generate realistic product names and descriptions from just a category label** — powered by a LoRA fine-tuned Qwen1.5-0.5B-Chat model trained on real Amazon product data.
